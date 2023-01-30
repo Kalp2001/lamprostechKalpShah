@@ -1,0 +1,44 @@
+import java.io.*;
+public class elementonce {
+
+
+
+        static int findSingle(int A[], int arr_size)
+        {
+
+
+            for (int i = 0; i < arr_size; i++) {
+
+
+                int count = 0;
+
+                for (int j = 0; j < arr_size; j++) {
+
+                    if (A[i] == A[j]) {
+                        count++;
+                    }
+                }
+
+
+                if (count == 1) {
+                    return A[i];
+                }
+            }
+
+            return -1;
+        }
+
+        public static void main (String[] args) {
+            int arr[] = { 2, 3, 5, 4, 5, 3, 4 };
+            int n = arr.length;
+
+            // Function call
+            System.out.println("Element occurring once is " + findSingle(arr, n));
+           int  arr1[]={2,2,1,3,5,3,5};
+            int v = arr.length;
+            System.out.println("Element occurring once is " + findSingle(arr1, v));
+
+
+
+        }
+    }
